@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: linear-gradient(to bottom, #0d47a1, #1e88e5);
+      font-family: Arial, sans-serif;
+    }
+
+    .phone {
+      width: 90%;
+      max-width: 400px;
+      height: 700px;
+      background: linear-gradient(to bottom, #1e293b, #0f172a);
+      border-radius: 40px;
+      padding: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .header {
+      padding-top: 50px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .header h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .header .temperature {
+      font-size: 4rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .header p {
+      font-size: 1rem;
+      opacity: 0.8;
+    }
+
+    .clouds {
+      position: relative;
+      height: 200px;
+      background: url('https://via.placeholder.com/400x200') no-repeat center;
+      background-size: cover;
+      margin-bottom: 20px;
+    }
+
+    .forecast {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      backdrop-filter: blur(10px);
+    }
+
+    .forecast-title {
+      font-size: 1rem;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .hourly-container {
+      width: 100%;
+      background: linear-gradient(to top, #2d3748, #1a202c);
+      border-radius: 20px;
+      padding: 20px;
+      display: flex;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .hourly-container::-webkit-scrollbar {
+      display: none;
+    }
+
+    .hourly-item {
+      flex: 0 0 60px;
+      text-align: center;
+      color: #fff;
+      margin: 0 0px;
+    }
+
+    .hourly-item p {
+      font-size: 0.9rem;
+    }
+
+    .hourly-item .hour {
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: center;
+    }
+
+    .add-btn {
+      background: #1e88e5;
+      border: none;
+      border-radius: 50%;
+      padding: 15px;
+      font-size: 2rem;
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      transition: background 0.3s;
+    }
+
+    .add-btn:hover {
+      background: #1565c0;
+    }
+  </style>
+</head>
+<body>
+  <div class="phone">
+    <div class="header">
+      <h1>Montreal</h1>
+      <div class="temperature">19°</div>
+      <p>Mostly Clear</p>
+      <p>H:24° L:18°</p>
+    </div>
+    <div class="clouds"></div>
+    <div class="forecast">
+      <div class="forecast-title">Hourly Forecast</div>
+      <div class="hourly-container">
+        <div class="hourly-item">
+          <p class="hour">12 AM</p>
+          <p>19°</p>
+        </div>
+        <div class="hourly-item">
+          <p class="hour">1 AM</p>
+          <p>18°</p>
+        </div>
+        <div class="hourly-item">
+          <p class="hour">2 AM</p>
+          <p>17°</p>
+        </div>
+        <div class="hourly-item">
+          <p class="hour">3 AM</p>
+          <p>16°</p>
+        </div>
+        <div class="hourly-item">
+          <p class="hour">4 AM</p>
+          <p>15°</p>
+        </div>
+        <div class="hourly-item">
+          <p class="hour">5 AM</p>
+          <p>15°</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <button class="add-btn">+</button>
+    </div>
+  </div>
+</body>
+</html>

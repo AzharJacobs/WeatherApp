@@ -71,7 +71,7 @@
 
         /* Landing Page Styles */
         .landing-container {
-            display: none;
+            display: flex;
             flex-direction: column;
             padding: 20px;
             gap: 20px;
@@ -89,17 +89,19 @@
         }
 
         .city-card {
-            width: 90%;
-            background: #cbd5f7;
-            padding: 15px;
-            border-radius: 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            font-size: 18px;
-            color: #333;
-        }
+    width: 374px;
+    height: 104px;
+    background: #cbd5f7;
+    padding: 5px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    color: #333;
+}
+
 
         .city-card span {
             font-weight: bold;
@@ -111,27 +113,8 @@
             color: #555;
         }
     </style>
-    <script>
-        function showLandingPage() {
-            document.querySelector('.container').style.display = 'none';
-            document.querySelector('.landing-container').style.display = 'flex';
-        }
-    </script>
 </head>
 <body>
-    <div class="container">
-        <div class="icon">
-            <!-- SVG for Sun and Cloud -->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-                <circle cx="42" cy="22" r="12" fill="#FFD93B" />
-                <circle cx="30" cy="34" r="14" fill="#B3E5FC" />
-                <circle cx="40" cy="34" r="14" fill="#B3E5FC" />
-            </svg>
-        </div>
-        <h1>weather</h1>
-        <p>@wolf</p>
-        <button class="button" onclick="showLandingPage()">let's start</button>
-    </div>
 
     <div class="landing-container">
         <input type="text" class="search-bar" placeholder="Enter location" />
