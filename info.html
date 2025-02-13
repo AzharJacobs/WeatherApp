@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather UI Clone</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: url('./Weather\ animation\ -\ Svetlana\ URBANOWICZ\ \(1\).gif') no-repeat center center/cover;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+        .weather-container {
+            width: 1100px;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: left;
+            box-shadow: 0 6px 40px rgba(0, 0, 0, 0.5);
+        }
+        .top-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .temperature-container {
+            font-size: 24px;
+        }
+        .temperature {
+            font-size: 130px;
+            font-weight: 700;
+            color: #FFD700;
+        }
+        .weather-info {
+            font-size: 22px;
+            font-weight: 400;
+            margin-top: 8px;
+        }
+        .details {
+            font-size: 18px;
+            opacity: 0.9;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .hourly-forecast {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 20px;
+        }
+        .forecast-item {
+            text-align: center;
+        }
+        .forecast-item p {
+            font-size: 18px;
+            font-weight: 500;
+        }
+        .forecast-item .temperature {
+            font-size: 22px;
+            font-weight: 700;
+            color: #FFD700;
+        }
+        .week-forecast {
+            margin-top: 25px;
+            display: flex;
+            justify-content: space-between;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 24px;
+            border-radius: 20px;
+        }
+        .forecast-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            flex-wrap: wrap;
+        }
+        .week-forecast .day {
+            text-align: center;
+        }
+        .week-forecast .day p {
+            font-size: 18px;
+            font-weight: 500;
+        }
+        .week-forecast .day .temperature {
+            font-size: 22px;
+            font-weight: 700;
+            color: #FFD700;
+        }
+        .day {
+            text-align: center;
+            flex: 1;
+            padding: 15px;
+            font-size: 1.1em;
+            border-right: 1px solid rgba(255, 255, 255, 0.2);
+            color: rgba(255, 255, 255, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <div class="weather-container">
+        <div class="top-section">
+            <div class="temperature-container">
+                <p class="weather-info">Friday 27 July 15:00</p>
+                <h2 class="temperature">+22°C</h2>
+                <p class="weather-info">Feels like 23°</p>
+                <p class="weather-info details">Sunrise: 4:59 | Sunset: 20:47</p>
+            </div>
+            <div class="details">
+                <p>Wind speed: 1-8 m/s</p>
+                <p>Humidity: 42-76%</p>
+                <p>Pressure: 747-749 mm</p>
+                <p>Precipitation probability: 2%</p>
+            </div>
+        </div>
+        <div class="hourly-forecast">
+            <div class="forecast-item">
+                <p>Night</p>
+                <p class="temperature">+17°C</p>
+            </div>
+            <div class="forecast-item">
+                <p>Morning</p>
+                <p class="temperature">+15°C</p>
+            </div>
+            <div class="forecast-item">
+                <p>Day</p>
+                <p class="temperature">+22°C</p>
+            </div>
+            <div class="forecast-item">
+                <p>Evening</p>
+                <p class="temperature">+19°C</p>
+            </div>
+        </div>
+        <div class="forecast-container">
+            <div class="day">Saturday <span>+17°</span><img src=""><br>Cloudy</div>
+            <div class="day">Sunday <span>+17°</span><br>Partly Cloudy</div>
+            <div class="day">Monday <span>+18°</span><br>Sunny</div>
+            <div class="day">Tuesday <span>+22°</span><br>Sunny</div>
+            <div class="day">Wednesday <span>+21°</span><br>Partly Cloudy</div>
+            <div class="day">Thursday <span>+20°</span><br>Clouds & Sun</div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
